@@ -7,4 +7,20 @@ class MyApp < Sinatra::Base
     @blog1 = Blog.new 
     erb :index
   end
+
+  get '/happy' do 
+    erb :happy
+  end
+
+  get '/sad' do
+    erb :sad
+  end
+
+  get '/angry' do
+    erb :angry
+  end
+
+  get '/funny' do 
+    erb :funny
+  end
 end 
