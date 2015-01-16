@@ -1,0 +1,37 @@
+title {
+  color: black;
+  font-size: 500px;
+  font-family: arial;
+}
+body {
+  color: red;
+  background-color: #CCFFFF;
+  background-image: url("http://assets.rollingstone.com/assets/2014/article/beyonce-is-now-selling-drunk-in-love-emoji-t-shirts-20140610/15691/_original/1035x914-20140608-beyonce-1800-1402425050.jpg");
+
+}
+
+h1 {
+  color: blue;
+  font-size: 50px;
+  font-family: arial;
+  text-align: 500;
+}
+
+.header {
+  text-align: center;
+}
+
+.home-pic {
+  text-align: center;
+}
+
+img {
+  border-style: solid;
+  border width: 10;
+  border color: 005500;
+  border-radius: 10px;
+}
+
+form {
+  color: blue;
+}
