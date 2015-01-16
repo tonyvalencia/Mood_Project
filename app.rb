@@ -4,23 +4,14 @@ require_relative 'lib/tumblr.rb'
 
 class MyApp < Sinatra::Base
   get '/' do 
-    @blog1 = Blog.new 
     erb :index
   end
 
-  get '/happy' do 
-    erb :happy
+  post '/' do
+  	url = params[:site]
+  	@blog = Blog.new(url)
+  	@mood = params[:mood] #we need to set this up
+  	erb :mood
   end
 
-  get '/sad' do
-    erb :sad
-  end
-
-  get '/angry' do
-    erb :angry
-  end
-
-  get '/funny' do 
-    erb :funny
-  end
 end 
