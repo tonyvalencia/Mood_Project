@@ -1,23 +1,23 @@
 title {
-  color: black;
-  font-size: 500px;
-  font-family: arial;
   text-align: center;
+  color: blue;
+  font-size: 5000px;
+  font-family: arial;
+  te
 }
 body {
   color: red;
   background-color: #CCFFFF;
-  text-align: center;
+  text-indent: 500;
+  background-position: center;
+  background-image: 
 }
 
 h1 {
   color: blue;
-  font-size: 50px;
+  font-size: 500px;
   font-family: arial;
-  text-align: center;
-}
-
-h2 {
+  text-indent: 5000;
   text-align: center;
 }
 
@@ -30,12 +30,13 @@ h2 {
 }
 
 img {
-  border-style: solid;
+  border-style: solid ; 
   border width: 10;
-  border color: 005500;
+  border color: #005500;
   border-radius: 10px;
 }
 
 form {
   color: blue;
+t
 }

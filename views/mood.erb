@@ -1,7 +1,7 @@
-<h1>This is the page where the mood will show up.</h1> 
+<h1>Your mood is <%= @mood %></h1> 
 
-<p>It'll say something like, your mood is <%= @mood %></p>
-
-Here is a picture for that mood:
+<p>Here are pictures for <%= @mood %></p>
 
 <img src="<%= @blog.post_body %>">
+
+<link rel="stylesheet" type="text/css" href="style.css">
