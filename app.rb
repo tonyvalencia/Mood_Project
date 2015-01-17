@@ -8,11 +8,9 @@ class MyApp < Sinatra::Base
   end
 
   post '/' do 
-    puts params.inspect
   	url = params[:site]
   	@blog = Blog.new(url)
     @url_array = @blog.post_body
-  	# @mood = params[:value2] #we need to set this up
     if url == "gif-guy.tumblr.com"
       @mood = "Funny"
     elsif url == "graceinitiatessarcasm.tumblr.com"
@@ -26,7 +24,6 @@ class MyApp < Sinatra::Base
     elsif url == "crlpvxx.tumblr.com"
       @mood = "Flawless"
     end
-      
   	erb :mood
   end
 
