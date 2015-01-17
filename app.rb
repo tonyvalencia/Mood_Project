@@ -13,9 +13,17 @@ class MyApp < Sinatra::Base
   	@blog = Blog.new(url)
   	# @mood = params[:value2] #we need to set this up
     if url == "gif-guy.tumblr.com"
-      @mood = "Happy"
-    elsif url == "graceinitiatessarcasm.tumblr.com"
       @mood = "Funny"
+    elsif url == "graceinitiatessarcasm.tumblr.com"
+      @mood = "Happy"
+    elsif url == "longhornsbec.tumblr.com"
+      @mood = "Discouraged"
+    elsif url == "beyonce.tumblr.com"
+      @mood = "Beyonce"
+    elsif url == "yourreactiongifs.tumblr.com"
+      @mood = "Giffy"
+    elsif url == "crlpvxx.tumblr.com"
+      @mood = "Flawless"
     end
       
   	erb :mood
