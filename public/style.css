@@ -6,7 +6,7 @@ title {
 }
 body {
   color: red;
-  background-color: #CCFFFF;
+  background-color: #00FFFF;
   text-align: center;
 }
 
@@ -15,6 +15,7 @@ h1 {
   font-size: 50px;
   font-family: arial;
   text-align: center;
+
 }
 
 h2 {

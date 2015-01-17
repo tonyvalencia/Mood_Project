@@ -14,7 +14,7 @@ class Blog
 
   def post_body
     photos = []
-    posts = @client.posts(@url, :limit => 30)["posts"]
+    posts = @client.posts(@url, :limit => 50)["posts"]
 
     posts.each_with_index do |post, index|
       if !!(post["photos"])
