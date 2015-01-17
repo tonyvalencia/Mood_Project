@@ -11,6 +11,7 @@ class MyApp < Sinatra::Base
     puts params.inspect
   	url = params[:site]
   	@blog = Blog.new(url)
+    @url_array = @blog.post_body
   	# @mood = params[:value2] #we need to set this up
     if url == "gif-guy.tumblr.com"
       @mood = "Funny"

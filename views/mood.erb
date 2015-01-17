@@ -2,6 +2,8 @@
 
 <p>Here are pictures for <%= @mood %></p>
 
-<img src="<%= @blog.post_body %>">
+<% @url_array.each do |url| %>
+	<img src="<%=url%>" width="300px">
+<% end %>
 
 <link rel="stylesheet" type="text/css" href="style.css">

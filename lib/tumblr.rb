@@ -13,7 +13,20 @@ class Blog
   end
 
   def post_body
-    photo_url = @client.posts(@url, :limit => 1)["posts"][0]["photos"][0]["alt_sizes"][0]["url"]
+    photos = []
+    posts = @client.posts(@url, :limit => 30)["posts"]
+
+    posts.each_with_index do |post, index|
+      if !!(post["photos"])
+          photos << post["photos"][0]["alt_sizes"][0]["url"]
+      end
+    end
+    photos
+  end
+
+    # photos << @client.posts(@url, :limit => 3)["posts"][0]["photos"][0]["alt_sizes"][0]["url"]
+    # photos << @client.posts(@url, :limit => 3)["posts"][1]["photos"][0]["alt_sizes"][0]["url"]
+    # photo_url3 = @client.posts(@url, :limit => 3)["posts"][2]["photos"][0]["alt_sizes"][0]["url"]
     
     # if !(@client.posts(@url, :limit => 1)["posts"][0]["image_permalink"])
     #   link = @client.posts(@url, :limit => 1)["posts"][0]["photos"][0]["alt_sizes"][0]["url"]
@@ -21,5 +34,4 @@ class Blog
     # elsif !(@client.posts(@url, :limit => 1)["posts"][0]["body"])
     #   @client.posts(@url, :limit => 1)["posts"][0]["body"]
     # end   
-  end
 end
