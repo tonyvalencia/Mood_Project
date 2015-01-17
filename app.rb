@@ -7,10 +7,17 @@ class MyApp < Sinatra::Base
     erb :index
   end
 
-  post '/' do
+  post '/' do 
+    puts params.inspect
   	url = params[:site]
   	@blog = Blog.new(url)
-  	@mood = params[:mood] #we need to set this up
+  	# @mood = params[:value2] #we need to set this up
+    if url == "gif-guy.tumblr.com"
+      @mood = "Happy"
+    elsif url == "graceinitiatessarcasm.tumblr.com"
+      @mood = "Funny"
+    end
+      
   	erb :mood
   end
 
